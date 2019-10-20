@@ -348,14 +348,14 @@ namespace dotenv
 
     };
 
-    const container parser::SP
+    inline const container parser::SP
     {
         container::CHAR_MODE::INCLUDE,
         SP_C,
         TB_C
     };
 
-    const container parser::UNQUOTED_KEY_CHAR
+    inline const container parser::UNQUOTED_KEY_CHAR
     {
         container::CHAR_MODE::EXCLUDE,
         CS_C,
@@ -368,7 +368,7 @@ namespace dotenv
         CR_C
     };
 
-    const container parser::UNQUOTED_VALUE_CHAR
+    inline const container parser::UNQUOTED_VALUE_CHAR
     {
         container::CHAR_MODE::EXCLUDE,
         CS_C,
@@ -380,7 +380,7 @@ namespace dotenv
         CR_C
     };
 
-    const container parser::UNQUOTED_COMMENT_CHAR
+    inline const container parser::UNQUOTED_COMMENT_CHAR
     {
         container::CHAR_MODE::EXCLUDE,
         NL_C,
@@ -455,9 +455,9 @@ namespace dotenv
 
     };
 
-    const std::string dotenv::env_filename = ".env";
-    const std::string dotenv::config_err = "config() method must be called first";
-    dotenv dotenv::_instance;
+    inline const std::string dotenv::env_filename = ".env";
+    inline const std::string dotenv::config_err = "config() method must be called first";
+    inline dotenv dotenv::_instance;
 
-    dotenv& env = dotenv::instance().config();
+    inline dotenv& env = dotenv::instance().config();
 }
